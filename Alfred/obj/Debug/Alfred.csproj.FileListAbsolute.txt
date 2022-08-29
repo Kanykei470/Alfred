@@ -1,0 +1,11 @@
+D:\Projects\Alfred\Alfred\bin\Debug\Alfred.exe.config
+D:\Projects\Alfred\Alfred\bin\Debug\Alfred.exe
+D:\Projects\Alfred\Alfred\bin\Debug\Alfred.pdb
+D:\Projects\Alfred\Alfred\obj\Debug\Alfred.csproj.AssemblyReference.cache
+D:\Projects\Alfred\Alfred\obj\Debug\Alfred.csproj.SuggestedBindingRedirects.cache
+D:\Projects\Alfred\Alfred\obj\Debug\Alfred.Form1.resources
+D:\Projects\Alfred\Alfred\obj\Debug\Alfred.Properties.Resources.resources
+D:\Projects\Alfred\Alfred\obj\Debug\Alfred.csproj.GenerateResource.cache
+D:\Projects\Alfred\Alfred\obj\Debug\Alfred.csproj.CoreCompileInputs.cache
+D:\Projects\Alfred\Alfred\obj\Debug\Alfred.exe
+D:\Projects\Alfred\Alfred\obj\Debug\Alfred.pdb

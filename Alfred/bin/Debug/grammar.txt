@@ -1,0 +1,11 @@
+Hello
+Wake up
+Alfred
+empty trash
+volume up
+volume down
+mute
+time
+date
+c m d
+open settings
