@@ -83,26 +83,35 @@ namespace Alfred
             {
                 Alfred.SpeakAsync("My name is Alfred I am here to help you!");
             }
-            if (speech == "Alfred")
+            if (speech == "Show commands")
             {
                 Alfred.SpeakAsync("Yes mis");
+                string[] commands = (File.ReadAllLines(@"grammar.txt"));
+                listBox1.Items.Clear();
+                listBox1.SelectionMode = SelectionMode.None;
+                listBox1.Visible=true;
+                foreach(string command in commands)
+                {
+                    listBox1.Items.Add(command);
+                }
+            }
+            if (speech == "Hide commands")
+            {
+                Alfred.SpeakAsync("Yes mis");
+                listBox1.Visible = false;
             }
             if (speech == "empty trash")
             {
                 Alfred.SpeakAsync("Yes mis");
-                label2.Text= "emptying trash";
                 SHEmptyRecycleBin(IntPtr.Zero, null, RecycleFlags.SHERB_NOSOUND | RecycleFlags.SHERB_NOCONFIRMATION);
                 Thread.Sleep(1000);
-                label2.Text = "";
             }
             if (speech == "volume up")
             {
                 Alfred.SpeakAsync("Yes mis");
-                label2.Text = "Volume +2";
                 //Console.Beep();
                 SendMessage(this.Handle, WM_APPCOMMAND, IntPtr.Zero, (IntPtr)APPCOMMAND_VOLUME_UP);
                 Thread.Sleep(1000);
-                label2.Text = "";
             }
             if (speech == "volume down")
             {
@@ -116,17 +125,12 @@ namespace Alfred
             }
             if (speech == "time")
             {
-                label2.Text = "TIME:"+DateTime.Now.ToString("HH: mm");
                 Alfred.SpeakAsync(DateTime.Now.ToString("HH:mm"));
                 Thread.Sleep(1000);
-                label2.Text = "";
             }
             if (speech == "date")
             {
-                label2.Text = "DATE:" + DateTime.Now.ToString("d");
                 Alfred.SpeakAsync(DateTime.Now.ToString("d"));
-                Thread.Sleep(1000);
-                label2.Text = "";
             }
             if (speech == "c m d")
             {
@@ -137,7 +141,21 @@ namespace Alfred
             {
                 Alfred.SpeakAsync("Yes mis");
                 Process.Start("explorer.exe", @"shell:::{BB06C0E4-D293-4f75-8A90-CB05B6477EEE}");
-
+            }
+            if (speech == "open settings")
+            {
+                Alfred.SpeakAsync("Yes mis");
+                Process.Start("explorer.exe", @"shell:::{BB06C0E4-D293-4f75-8A90-CB05B6477EEE}");
+            }
+            if (speech == "open opera")
+            {
+                Alfred.SpeakAsync("Yes mis");
+                System.Diagnostics.Process.Start("http://google.com");
+            }
+            if (speech == "play music")
+            {
+                Alfred.SpeakAsync("Yes mis");
+                System.Diagnostics.Process.Start("Spotify.exe");
             }
             if (speech == "Stop listening")
             {

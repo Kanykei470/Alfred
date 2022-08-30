@@ -1,6 +1,6 @@
 Hello
 Wake up
-Alfred
+Show commands
 empty trash
 volume up
 volume down
@@ -9,3 +9,6 @@ time
 date
 c m d
 open settings
+open opera
+play music
+Hide commands
